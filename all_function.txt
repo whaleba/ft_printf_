@@ -1,0 +1,57 @@
+char		*ft_accur_zero(char *str, int num)
+char	*ft_zero_accur_and_zero_int()
+int			ft_get_p(t_str *li, va_list vlist)
+int			ft_get_s(t_str *li, va_list vlist)
+int			ft_get_u(t_str *li, va_list vlist)
+int			ft_get_x(t_str *li, va_list vlist)
+int			ft_printf(const char *format, ...)
+int			ft_scan(const char *format, t_str *li)
+int		ft_get_d(t_str *li, va_list vlist)
+int		ft_print_width(t_str *li, char ch)
+int	ft_get_c(t_str *li, va_list vlist)
+int ft_what_a_char(const char *format, t_str *li, va_list vlist)
+void	ft_change_zero_list(t_str *li, int res)
+void	ft_putstr_n(char *s, int num, t_str *li)
+
+static char	*ft_accur_zero_minus(char *str, int num)
+static char	*ft_itoa_p(size_t pntr)
+static char	*ft_itoa_u(unsigned int n)
+static char	*ft_itoa_x(unsigned int pntr, int shift)
+static char	*ft_make_str_ar(t_str *li, unsigned int u_int_arg)
+static char	*ft_pre_accur_zero(int int_arg, t_str *li)
+static int	ft_begin(const char *format, t_str *li, va_list vlist, int check)
+static int	ft_check_double_percent(const char *format, t_str *li)
+static int	ft_count_itoa_p(size_t pntr)
+static int	ft_count_itoa_x(unsigned int pntr)
+static int	ft_manipulate_accuracy_s(t_str *li)
+static int	ft_pre_atoi(const char *format, t_str *li, int i)
+static int	ft_print_c(unsigned char ch_arg, t_str *li)
+static int	ft_print_d(char *str_ar, t_str *li)
+static int	ft_print_p(char *str_ar, t_str *li)
+static int	ft_print_p_width(t_str *li, char ch)
+static int	ft_print_persent_with_arg(t_str *li)
+static int	ft_print_s(char *str_ar, t_str *li, int check_err)
+static int	ft_print_u(char *str_ar, t_str *li)
+static int	ft_print_x(char *str_ar, t_str *li)
+static int	ft_print_x_width(t_str *li, char ch)
+static int	ft_searh_flags(const char *format, t_str *li, va_list vlist, int i)
+static void	ft_print_percent(t_str *li)
+static void	ft_width_star(const char *format, t_str *li, va_list vlist, int i)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

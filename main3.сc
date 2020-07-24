@@ -1,0 +1,121 @@
+
+#include "libftprintf.h"
+#include <stdio.h>
+#include <limits.h>
+#include <unistd.h>
+
+
+int	main(void)
+{
+	int	*tab = malloc(sizeof(int) * 10);
+	int	*tab2 = malloc(0);
+//"%s\n", NULL+0x12346
+	int my, orig, a, b, i;
+i = 0;
+	int		test_number;
+	test_number = 4534554;
+	char	format[100] = "Hello%%, world! %c    |   %10.4s   |    %x %X %p %08u %10d %i%%\n";
+/*
+	//printf("%u|%x\n",UINT32_MAX,UINT32_MAX);
+	ft_printf("%05d\n", 123);
+
+//	printf("%05d|%5.5d|%06.5d\n",43,44,45);
+	ft_printf("%05d|%5.5d|%06.5d\n", 43,44,45);
+
+	ft_printf(format, 'X', NULL, 100000, 100000,&test_number, 255, -255, -255);
+	printf(format, 'X', NULL, 100000, 100000,&test_number, 255, -255, -255);
+
+	//ft_printf("%10.*s\n", 3, "HELLO");
+	//ft_printf("|%*.*s|%.*s|%10.*s|%*.3s|\n", 10,3,"Hello", 4,"Hello.", 3,"Hello", 10,"Hello");
+	//printf("|%*.*s|%.*s|%10.*s|%*.3s|\n", 10,3,"Hello", 4,"Hello.", 3,"Hello", 10,"Hello");
+
+// TESTING WIDTH AND PRECISION
+	char	formatB[100] = "|%3.1s|%3.0s|%3s|%3.s|%10.3s|%.3s|%5.3s|%.10s|\n";
+	ft_printf(formatB, NULL, NULL, NULL, NULL,"null00","null00","null00","null00");
+	printf(formatB, NULL, NULL, NULL,  NULL,"null00", "null00","null00","null00");
+	char	formatC[100] = "%10c|%10.3c|%.3c|%c|      |%.3s| |%.s| |%0.s|\n";
+	ft_printf(formatC, (char)0, 'b','c','d',"NULL","NULL","NULL");
+	printf(formatC,  (char)0, 'b','c','d',"NULL","NULL","NULL");
+
+
+// TESTING WIDTH AND PRECISION
+	char	formatWP[100] = "%10s|%10.3s|%.3s|%s|%c%c%c|\n";
+	ft_printf(formatWP, "money", "money","money","money",(char)128,(char)129,(char)130);
+	printf(formatWP,  "money", "money","money","money",(char)128,(char)129,(char)130);
+
+
+// TESTING THE I
+	char	formatI[100] = "%i|%-10i|%10i|%010i|\n";
+	ft_printf(formatI, 1, 2, 3, 4);
+	printf(formatI, 1, 2, 3, 4);
+
+// TESTING THE STRING
+	char	formatString[100] = "%s | %-10s | %10s | %010s |\n";
+	ft_printf(formatString, "one", "two", "three", "four");
+	printf(formatString, "one", "two", "three", "four" );
+
+// TESTING combined
+	char	formatWCombined[100] = "|%c%c%c|\n";
+	ft_printf(formatWCombined,(char)128,(char)129,(char)130);
+	printf(formatWCombined,(char)128,(char)129,(char)130);
+
+// TESTING combined
+	char	formatWN[100] = "|%5c|%-10s|\n";
+	ft_printf(formatWN,'\0',(char*)0);
+	printf(formatWN,'\0',(char*)0);
+
+//TESTING --
+//	ft_printf("%i\n", INT32_MIN);
+// 	printf("%i\n", INT32_MIN);
+
+//TESTING U
+	char	formatU[100] = "%5.0u|%5.0d|%05.0u|%5.0d|\n";
+	ft_printf(formatU, 0,0,123,123);
+	printf(formatU, 0,0,123,123);
+
+
+//TESTING D and Nuli
+	char	formatD[100] = "%07d|%05d|%05.d|%05.0d|%05.1d|%05.4d|%7.5d|%07.5d\n";
+	ft_printf(formatD,-54, 111, 222, 333, 444,555,666,777);
+	printf(formatD,-54, 111, 222, 333, 444,555,666,777);
+
+
+
+	printf("\n");
+	 	printf("|%020.*s|\n", -1, "NULL");
+	   ft_printf("|%020.*s|\n", -1, "NULL");
+
+
+		//printf("|%2785235234523%|\n");
+	 //ft_printf("|%2785235234523%|\n");
+
+	printf("\n i = %d \n", i);
+
+	//ребят, а почему printf( "%.0u\n", 0) не выдает 0? что происходит с принтф (при  %u) при precision = 0 и арг = 0?
+	//так написано в стандарте вроде. просто случай такой - точность 0 и число 0, значит не выводим.
+	//это написано про d, i, u, x, X
+	printf( "%.0u\n", 0);
+	ft_printf( "%.0u\n", 0);
+
+
+	printf("{%020.*s}\n", -5, "42");
+	ft_printf("{%020.*s}\n", -5, "42");
+
+     a = 18;
+     i = 12;
+    printf("%-00000-----*i, %---0.*d, %0-0-0-0-0.*d, %-0-0-0-0-.*d, %-----.*d", a, i, a, i, a, i, a, i, a, i);
+    printf("\n");
+    ft_printf("%-00000-----*i, %---0.*d, %0-0-0-0-0.*d, %-0-0-0-0-.*d, %-----.*d", a, i, a, i, a, i, a, i, a, i);
+    printf("\n");
+
+*/
+
+
+       printf("%% *.5i 42 == |% *.5i|", 4, 42);
+    printf("\n");
+    ft_printf("%% *.5i 42 == |% *.5i|", 4, 42);
+
+
+
+ 	return (0);
+}
